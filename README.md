@@ -26,7 +26,7 @@ someVar changed from 0 to 100
 ```
 
 ###Whats it useful for?
-E.g to update ui components or visualizers when data changes, it's the main reason why this library was made.
+For example to update ui components or visualizers when data changes, it's the main reason why this library was made.
 
 ###How it works?
 
