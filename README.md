@@ -1,5 +1,3 @@
-Simplebinds is an haxelib that provides an easy way to listen to events when variable values are changed.
-
 ##Example
 ```haxe
 @:build(simple.bind.Macros.build())
