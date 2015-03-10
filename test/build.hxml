@@ -1,0 +1,14 @@
+-cp ../
+-main Main
+-lib tink_macro
+-debug
+--each
+
+#-neko bin/out.n
+--next
+#-js bin/out.js
+--next
+#-cpp bin/cpp
+--next
+-swf bin/out.swf
+-swf-version 11
