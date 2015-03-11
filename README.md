@@ -42,7 +42,7 @@ There isn't, however it provides a base where the two way binding can be created
 - js
 - cpp
 - neko
-- ~~flash~~ (currently generates the right code but fails to compile, seems to be an issue with haxe, until it's fixed the haxelib version will be delayed).
+- flash
 
 ###Todo:
 
