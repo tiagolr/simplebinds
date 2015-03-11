@@ -1,0 +1,14 @@
+{
+  "name": "simplebinds",
+  "url": "https://github.com/ProG4mr/simplebinds",
+  "license": "MIT",
+  "classPath": "src",
+  "description": "Provides signal dispatching when a variable is changed",
+  "version": "1.0.0",
+  "releasenote": "updated dependencies",
+  "contributors": ["TiagoLr"],
+   "dependencies" : {
+		"tink_macro" : "",
+		"tink_core"	 : ""
+   }
+}
