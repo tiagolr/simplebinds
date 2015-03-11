@@ -1,5 +1,3 @@
-Simplebinds is an haxelib that provides an easy way to listen to events when variable values are changed.
-
 ##Example
 ```haxe
 @:build(simple.bind.Macros.build())
@@ -28,15 +26,18 @@ someVar changed from 0 to 100
 ```
 
 ###Whats it useful for?
-For example to update ui components or visualizers when data changes, it's the main reason this library was made.
+For example to update ui components or visualizers when data changes, it's the main reason why this library was made.
 
 ###How it works?
 
-```@build(simple.bind.Macros.build())``` and ```@bind``` metadata, create a call to ```Dispatcher.dispatch()``` during compile before the return of the variable setter. If the variable has no setter it create a new one.
+```@build(simple.bind.Macros.build())``` and ```@bind``` metadata are used to add a call to ```Dispatcher.dispatch()``` when the field changes, the call is added before the end of a variable setter, if the variable has no setter it creates a new one.
+
+###Aren't there other binding libraries?
+There are, and this one is based of **bindx**, the difference is that it only implements the basic method to dispatch events from a static dispatcher, it does not implement two-way binding or force you to implement extra setters or calls.
 
 ###Wait, where is the two-way binding in this?
 
-There isn't, however it provides a base where the two way binding can be created by listening to variable change events like the high-tech example above.
+There isn't, however it provides a base where the two way binding can be created by listening to the dispatcher events like the high-tech example above.
 
 ###Tested targets:
 - js
