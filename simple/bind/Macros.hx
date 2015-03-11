@@ -60,9 +60,7 @@ class Macros{
 											// store the current field value at the beggining of the setter
 											switch (fn.expr.expr) {
 												case EBlock(exprs):
-													exprs.unshift(macro {
-														var __from__ = $variableRef;
-													});
+													exprs.unshift(macro var __from__ = $variableRef);
 												case _:
 											}
 											
@@ -129,13 +127,13 @@ class Macros{
 				switch (e.expr) {
 					case EConst(c):
 						macro {
-							simple.bind.Dispatcher.dispatch(this, $v{ fieldName }, untyped __from__, $variableRef ); 
+							simple.bind.Dispatcher.dispatch(this, $v{ fieldName }, $i{'__from__'} , $variableRef ); 
 							return $e;
 						}
 					case _:
 						macro {
 							${e.map(addDispatcherCall)};
-							simple.bind.Dispatcher.dispatch(this, $v{ fieldName }, untyped __from__, $variableRef ); 
+							simple.bind.Dispatcher.dispatch(this, $v{ fieldName }, $i{'__from__'} , $variableRef ); 
 							return $i{setterField};
 						}
 				}
